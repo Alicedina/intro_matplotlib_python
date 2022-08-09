@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from socket import AF_X25
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -35,6 +36,53 @@ if __name__ == '__main__':
     y3 = x**4
     y4 = np.sqrt(x)
 
+    fig = plt.figure()
+    ax1 = fig.add_subplot(2,2,1)
+    ax2 = fig.add_subplot(2,2,2)
+    ax3 = fig.add_subplot(2,2,3)
+    ax4 = fig.add_subplot(2,2,4)
+
+    ax1.plot(x, y1, color='b', marker='v', label='y= x^2')
+    ax1.set_facecolor('whitesmoke')
+    ax1.set_title('cuadratica')
+    ax1.set_ylabel('eje Y')
+    ax1.set_xlabel('eje X')
+    ax1.set_xlim([0, 2])
+    ax1.set_ylim([-2, 2])
+    ax1.legend()
+
+
+    ax2.plot(x, y2, color='r', marker='>', label='y = x^3')
+    ax2.set_facecolor('whitesmoke')
+    ax2.set_title('cubica')
+    ax2.set_ylabel('eje Y')
+    ax2.set_xlabel('eje X')
+    ax2.set_xlim([0, 3])
+    ax2.set_ylim([-4, 2])
+    ax2.legend()
+
+    ax3.plot(x, y3, color='k', marker='.', label='y = x^4')
+    ax3.set_facecolor('whitesmoke')
+    ax3.set_title('a la cuarta')
+    ax3.set_ylabel('eje Y')
+    ax3.set_xlabel('eje X')
+    ax3.set_xlim([0, 2])
+    ax3.set_ylim([-2, 2])
+    ax3.legend()
+
+
+
+    ax4.plot(x, y4, color='lime', marker='^', label='y = raiz^2')
+    ax4.set_facecolor('whitesmoke')
+    ax4.set_title('raiz cuadrada')
+    ax4.set_ylabel('eje Y')
+    ax4.set_xlabel('eje X')
+    ax4.set_xlim([0, 2])
+    ax4.set_ylim([0, 1])
+    ax4.legend()
+
+    plt.show()
+    
     # Alumnos: Esos cuatro gráficos deben estar colocados
     # en la diposición de 2 filas y 2 columna:
     # ------

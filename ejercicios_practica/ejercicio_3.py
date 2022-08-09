@@ -25,6 +25,18 @@ if __name__ == '__main__':
     # Función y = tanh(x) --> tangente hiperbólica
     y = np.tanh(x)
 
+    fig = plt.figure()
+    fig.suptitle('lineal y de puntos', fontsize = 12)
+    ax1 = fig.add_subplot(1, 2, 1)
+    ax2 = fig.add_subplot(1, 2, 2)
+    ax1.plot(x, y, c= 'royalblue')
+    ax1.set_facecolor('lightgray')
+    ax1.grid('solid')
+    ax2.scatter(x, y, c='darkorange')
+    ax2.set_facecolor('whitesmoke')
+    ax2.grid('solid')
+    plt.show()
+
     # Alumno: Graficar la función utilizando "scatter"
     # utilizando "x" e "y" ya disponible
 
